@@ -6,6 +6,9 @@
   <meta name="description" content="Bright Futures Education Foundation is a proposed education-support initiative in The Gambia, working toward a future where every student has a chance to succeed.">
   <meta name="theme-color" content="#123c35">
   <title>Bright Futures Education Foundation | The Gambia</title>
+  <meta property="og:title" content="Bright Futures Education Foundation">
+  <meta property="og:description" content="Giving Every Student a Chance to Succeed. Supporting access to education in The Gambia.">
+  <meta name="color-scheme" content="light">
   <style>
     :root {
       --green: #123c35;
@@ -124,6 +127,71 @@
       .footer-grid { align-items: flex-start; flex-direction: column; }
       form { padding: 20px; }
     }
+
+    /* Professional visual refresh */
+    :root {
+      --green: #103f37;
+      --green-2: #216b58;
+      --gold: #e0b653;
+      --cream: #fbf8f0;
+      --ink: #172d28;
+      --muted: #5e716a;
+      --line: #e2e9e4;
+      --shadow: 0 18px 48px rgba(16,63,55,.12);
+    }
+    body { letter-spacing: .002em; }
+    .notice { background: #fff5dc; border-bottom: 1px solid #f0dfb5; font-size: .84rem; }
+    header { box-shadow: 0 4px 20px rgba(16,63,55,.045); }
+    .brand { gap: 13px; }
+    .logo { border-radius: 15px; box-shadow: 0 5px 14px rgba(224,182,83,.24); }
+    .brand strong { letter-spacing: -.02em; }
+    nav a { transition: color .18s ease; }
+    .btn { box-shadow: 0 5px 14px rgba(0,0,0,.06); }
+    .btn-gold { background: linear-gradient(135deg,#f0cf78,#d8a83f); }
+    .btn-green { background: linear-gradient(135deg,#155044,#216b58); }
+    .hero { background:
+      radial-gradient(ellipse at 88% 5%, rgba(224,182,83,.24), transparent 29%),
+      radial-gradient(ellipse at 5% 100%, rgba(50,129,102,.3), transparent 35%),
+      linear-gradient(135deg,#0d332d 0%,#155044 58%,#216b58 100%); }
+    .hero-grid { padding-top: 88px; padding-bottom: 92px; gap: 58px; }
+    .eyebrow { padding: 8px 12px; border: 1px solid rgba(224,182,83,.45); border-radius: 999px; background: rgba(224,182,83,.09); }
+    h1 { text-wrap: balance; }
+    .hero p { line-height: 1.8; }
+    .hero-art { border-radius: 34px; box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 24px 55px rgba(0,0,0,.12); }
+    .book { border-radius: 22px; box-shadow: 14px 16px 0 rgba(224,182,83,.82), 0 18px 40px rgba(0,0,0,.12); }
+    .float-card { border: 1px solid #f2e6c8; }
+    section { scroll-margin-top: 90px; }
+    .value, .program, .transparency-card { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+    .value:hover, .program:hover, .transparency-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: #cbdcd2; }
+    .value, .program { box-shadow: 0 8px 25px rgba(16,63,55,.035); }
+    .program { padding: 28px; }
+    .program .icon { background: linear-gradient(135deg,#f8edcf,#f0dfb0); }
+    .pilot { background: radial-gradient(ellipse at 100% 0%,rgba(224,182,83,.12),transparent 34%), linear-gradient(135deg,#103f37,#174d42); }
+    .stat { backdrop-filter: blur(8px); }
+    .community { background: rgba(255,255,255,.035); }
+    .cta { background: linear-gradient(115deg,#fbf0d4,#f6e6bb); }
+    .cta-box { padding-top: 4px; padding-bottom: 4px; }
+    form { background: #fff; }
+    input:focus, select:focus, textarea:focus { outline: 3px solid rgba(33,107,88,.15); border-color: var(--green-2); }
+    .form-note { line-height: 1.55; }
+    footer { background: linear-gradient(135deg,#092720,#103f37); }
+    .smallprint { line-height: 1.65; }
+    @media (max-width: 850px) {
+      .hero-grid { padding-top: 58px; padding-bottom: 64px; gap: 34px; }
+      .hero-art { min-height: 270px; }
+    }
+    @media (max-width: 520px) {
+      .hero-grid { padding-top: 44px; padding-bottom: 50px; }
+      h1 { font-size: clamp(2.25rem, 11vw, 3.2rem); }
+      .hero-actions .btn { width: 100%; }
+      .float-card { right: 8px; bottom: 10px; padding: 10px 12px; font-size: .8rem; }
+      .book { width: min(240px, 78%); height: auto; min-height: 190px; padding: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+
   </style>
 </head>
 <body>
@@ -153,7 +221,7 @@
           <h1>Every student deserves a chance to shine.</h1>
           <p>We are building a community-focused initiative to help students in The Gambia overcome financial barriers to education—with support for school fees, transport, and lunch.</p>
           <div class="hero-actions">
-            <a class="btn btn-gold" href="#contact">Become a Supporter <span aria-hidden="true">→</span></a>
+            <a class="btn btn-gold" href="#contact">Support Our Mission <span aria-hidden="true">→</span></a>
             <a class="btn btn-outline" href="#about">Learn About Us</a>
           </div>
         </div>
@@ -304,7 +372,7 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
           <button class="btn btn-green" type="submit">Prepare Message <span aria-hidden="true">→</span></button>
-          <p class="form-note">This starter form opens your email app and does not store or submit data to a server. Add your official email address in the website code before publishing.</p>
+          <p class="form-note">This form opens your email app with your message prepared. It does not send automatically or store information on this website.</p>
         </form>
       </div>
     </section>
