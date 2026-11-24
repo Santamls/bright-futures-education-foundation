@@ -30,7 +30,8 @@
     header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
     .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 78px; }
     .brand { display: flex; gap: 12px; align-items: center; text-decoration: none; min-width: 220px; }
-    .logo { width: 46px; height: 46px; flex: 0 0 46px; border-radius: 14px; display: grid; place-items: center; color: var(--green); background: var(--gold); font-size: 1.45rem; font-weight: 900; }
+    .logo { width: 58px; height: 58px; flex: 0 0 58px; border-radius: 14px; display: grid; place-items: center; background: #fff; overflow: hidden; box-shadow: 0 5px 14px rgba(224,182,83,.24); }
+    .logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .brand strong { display: block; color: var(--green); font-size: .96rem; line-height: 1.2; }
     .brand small { color: var(--muted); font-size: .75rem; }
     nav { display: flex; align-items: center; gap: 22px; }
@@ -48,7 +49,9 @@
     h1 { font-size: clamp(2.5rem, 5vw, 4.45rem); line-height: 1.06; letter-spacing: -.04em; margin: 0 0 22px; max-width: 720px; }
     .hero p { color: #e4eee8; font-size: 1.12rem; max-width: 600px; margin: 0 0 28px; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .hero-art { min-height: 340px; border: 1px solid rgba(255,255,255,.18); border-radius: 28px; padding: 28px; background: linear-gradient(155deg, rgba(255,255,255,.13), rgba(255,255,255,.04)); position: relative; display: flex; align-items: center; justify-content: center; }
+    .hero-art { min-height: 340px; border: 1px solid rgba(255,255,255,.24); border-radius: 28px; padding: 28px; background: linear-gradient(155deg, rgba(255,255,255,.16), rgba(255,255,255,.04)); position: relative; display: flex; align-items: center; justify-content: center; }
+    .hero-logo-card { width: min(100%, 420px); background: rgba(255,255,255,.97); border: 1px solid rgba(255,255,255,.8); border-radius: 24px; padding: 16px; box-shadow: 0 24px 55px rgba(0,0,0,.22); }
+    .hero-logo-card img { display: block; width: 100%; height: auto; max-height: 390px; object-fit: contain; }
     .book { width: 240px; height: 205px; border-radius: 18px; background: var(--cream); box-shadow: 15px 18px 0 rgba(216,173,84,.75); color: var(--green); padding: 25px; transform: rotate(-5deg); }
     .book .sun { font-size: 2.5rem; }
     .book h3 { font-size: 1.6rem; line-height: 1.1; margin: 8px 0; }
@@ -109,7 +112,10 @@
     @media (max-width: 850px) {
       .hero-grid, .about-grid, .pilot-grid, .contact-grid, .transparency { grid-template-columns: 1fr; }
       .hero-grid { padding-top: 52px; gap: 32px; }
-      .hero-art { min-height: 280px; }
+      .hero-art { min-height: 280px; padding: 18px; }
+      .hero-logo-card { width: min(100%, 330px); padding: 10px; }
+      .hero-logo-card img { max-height: 300px; }
+      .float-card { right: 8px; bottom: 8px; padding: 10px 12px; font-size: .78rem; }
       .programs { grid-template-columns: 1fr; }
       .cta-box { align-items: flex-start; flex-direction: column; }
       nav { display: none; position: absolute; top: 78px; left: 0; right: 0; padding: 18px 24px 24px; background: white; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; }
@@ -121,7 +127,7 @@
       .brand { min-width: 0; }
       .brand strong { font-size: .82rem; }
       .brand small { font-size: .68rem; }
-      .logo { width: 40px; height: 40px; flex-basis: 40px; }
+      .logo { width: 46px; height: 46px; flex-basis: 46px; }
       .values, .communities { grid-template-columns: 1fr; }
       section { padding: 56px 0; }
       .footer-grid { align-items: flex-start; flex-direction: column; }
@@ -199,7 +205,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#home" aria-label="Bright Futures Education Foundation home">
-        <div class="logo" aria-hidden="true">✦</div>
+        <span class="logo"><img src="bright_futures_logo.png" alt="Bright Futures Education Foundation logo"></span>
         <div><strong>Bright Futures Education Foundation</strong><small>Giving Every Student a Chance to Succeed</small></div>
       </a>
       <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mainNav">Menu ☰</button>
@@ -225,11 +231,9 @@
             <a class="btn btn-outline" href="#about">Learn About Us</a>
           </div>
         </div>
-        <div class="hero-art" aria-label="Illustration representing learning and a brighter future">
-          <div class="book">
-            <div class="sun" aria-hidden="true">☀</div>
-            <h3>A brighter future starts with learning.</h3>
-            <p>Opportunity. Dignity. Education.</p>
+        <div class="hero-art" aria-label="Bright Futures Education Foundation logo and education mission">
+          <div class="hero-logo-card">
+            <img src="bright_futures_logo.png" alt="Bright Futures Education Foundation: Giving Every Student a Chance to Succeed">
           </div>
           <div class="float-card">✦ Small support. Lasting impact.</div>
         </div>
